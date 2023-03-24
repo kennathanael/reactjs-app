@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+// import './App.css';
+import Navbar from './components/navbar';
+import { useEffect, useState } from 'react';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  const [count, setCount] = useState(0);
+
+  useEffect(()=>{
+    if(count > 0){
+      console.log("Nice")
+    } else{
+      console.log("Jelek")
+    }
+  },[])
+
+  return (   
+    <><Navbar/>
+    <p>Count = {count}</p>
+
+    <button onClick={()=>{setCount(count+1)}}>
+      tambah
+    </button>
+    </>
   );
 }
 
