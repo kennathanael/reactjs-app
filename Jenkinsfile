@@ -1,9 +1,7 @@
 pipeline {
     agent 
     
-    tools{
-        nodejs, "NodeJS"
-        }
+    tools{"NodeJS"}
 
     stages {
         stage("download depedencies"){
