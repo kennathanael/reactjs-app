@@ -1,6 +1,5 @@
 pipeline {
-    agents any
-    
+    agent any
     stages {
         stage("download depedencies"){
             steps{
