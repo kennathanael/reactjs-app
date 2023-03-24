@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent 
+    
+    tools{
+        nodejs, "NodeJS"
+        }
+
     stages {
         stage("download depedencies"){
             steps{
