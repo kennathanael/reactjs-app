@@ -1,7 +1,9 @@
 pipeline {
     agent any
     
-    tools{"NodeJS"}
+    tools {
+        nodejs 'NodeJS 19.8.1'
+    }
 
     stages {
         stage("download depedencies"){
