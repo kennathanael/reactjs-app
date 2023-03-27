@@ -10,10 +10,18 @@ pipeline {
             }
         }
 
-        stage("start"){
+        stage("build"){
             steps{
                 nodejs ('NodeJS'){
-                    sh('npm start')
+                    sh('npm build')
+                }
+            }
+        }
+
+        stage("run dev"){
+            steps{
+                nodejs ('NodeJS'){
+                    sh('npm run dev')
                 }
             }
         }
