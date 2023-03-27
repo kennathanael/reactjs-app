@@ -5,7 +5,7 @@ pipeline {
         stage("download depedencies"){
             steps{
                 nodejs ('NodeJS'){
-                    batch("npm install")
+                    sh('npm install')
                 }
             }
         }
@@ -13,7 +13,7 @@ pipeline {
         stage("start"){
             steps{
                 nodejs ('NodeJS'){
-                    batch("npm start")
+                    sh('npm start')
                 }
             }
         }
