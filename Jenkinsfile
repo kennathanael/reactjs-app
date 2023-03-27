@@ -13,7 +13,7 @@ pipeline {
         stage("build"){
             steps{
                 nodejs ('NodeJS'){
-                    sh('npm build')
+                    sh('npm run build')
                 }
             }
         }
